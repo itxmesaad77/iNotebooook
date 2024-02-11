@@ -26,7 +26,7 @@ const handleConfirmPass=()=>{
     const handleSubmit = async(e)=>{
     e.preventDefault();
     if(credentials.cpassword===credentials.password){
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+    const response = await fetch(`http://localhost:4000/api/auth/createuser`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
           "Content-Type": "application/json",
