@@ -8,7 +8,7 @@ export const Login = (props) => {
     const handleSubmit=async(e)=>{
      e.preventDefault();
         // todo: API call
-        const response = await fetch(`http://localhost:4000/api/auth/login`, {
+        const response = await fetch(`${window.location.origin}/api/auth/login`, {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
             "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export const Login = (props) => {
         }else{
             props.showalert(' Invalid Credentials',"danger");
         }
-        const response1 = await fetch(`http://localhost:4000/api/auth/getuser`, {
+        const response1 = await fetch(`${window.location.origin}/api/auth/getuser`, {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
               "Content-Type": "application/json",
